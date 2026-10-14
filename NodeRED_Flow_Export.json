@@ -1,0 +1,131 @@
+[
+    {
+        "id": "4ed33ae2fee17053",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b2a9989e14aab0c5",
+        "type": "websocket in",
+        "z": "4ed33ae2fee17053",
+        "name": "",
+        "server": "f259bb9eca3d4151",
+        "client": "",
+        "x": 230,
+        "y": 100,
+        "wires": [
+            [
+                "8d84db2ff47dc03d",
+                "9ccb7f7f5588d73b"
+            ]
+        ]
+    },
+    {
+        "id": "8d84db2ff47dc03d",
+        "type": "websocket out",
+        "z": "4ed33ae2fee17053",
+        "name": "",
+        "server": "f259bb9eca3d4151",
+        "client": "",
+        "x": 670,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "9ccb7f7f5588d73b",
+        "type": "debug",
+        "z": "4ed33ae2fee17053",
+        "name": "output console",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "6ce81c32ae23184b",
+        "type": "mqtt in",
+        "z": "4ed33ae2fee17053",
+        "name": "",
+        "topic": "benchmark/ping",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "a39fdcd4f438b064",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 240,
+        "y": 220,
+        "wires": [
+            [
+                "39da6c0279929aa0",
+                "9ccb7f7f5588d73b"
+            ]
+        ]
+    },
+    {
+        "id": "39da6c0279929aa0",
+        "type": "mqtt out",
+        "z": "4ed33ae2fee17053",
+        "name": "",
+        "topic": "benchmark/pong",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a39fdcd4f438b064",
+        "x": 670,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "f259bb9eca3d4151",
+        "type": "websocket-listener",
+        "path": "/ws/benchmark",
+        "wholemsg": "false"
+    },
+    {
+        "id": "a39fdcd4f438b064",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    }
+]
